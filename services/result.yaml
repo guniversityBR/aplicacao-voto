@@ -6,11 +6,10 @@ metadata:
   name: result
   namespace: vote
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - name: "result-service"
-    port: 5001
+    port: 80
     targetPort: 80
-    nodePort: 31001
   selector:
     app: result
